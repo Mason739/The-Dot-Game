@@ -1,4 +1,4 @@
-# The-Dot-Game
+# The Dot Game
 A website that plays the Dot Game, with processing done in python
 ## How to Play
 The dot game is a very simple game. If you are forced to erase the last dot, you lose.
