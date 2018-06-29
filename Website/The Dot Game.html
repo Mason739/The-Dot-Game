@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>The Dot Game</title>
+  <link rel="icon" href="data:image/png;base64,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"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <script src="answer.js"></script>
+  <script src="script.js"></script>
+
+  <style>
+  h2 {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    border: 2px solid white;
+    border-radius: 5px;
+
+    color: white;
+  }
+
+  .row-of-dots {
+    cursor: pointer;
+  }
+  .row-of-dots:hover{
+    border: 2px solid #416cc9;
+    border-radius: 5px;
+  }
+
+  .computer-active {
+    border: 2px solid #f24135 !important;
+    border-radius: 5px;
+  }
+
+  .active {
+    border: 2px solid #416cc9;
+    border-radius: 5px;
+    cursor:pointer;
+
+    /*line-height: -10px;*/
+  }
+
+
+  .settings-icon {
+    font-size: 2em;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+
+    border: 4px solid #ffffff;
+    border-radius: 5px;
+  }
+
+  .settings-icon:hover {
+    background-color: #cccccc;
+    border: 4px solid #cccccc;
+    cursor: pointer;
+  }
+
+  .my-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+
+
+
+  /* The Modal (background) */
+  .modall {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .modall-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    /*background: #4CAF50;*/
+    background: #4178c9;
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    /*background: #4CAF50;*/
+    background: #4178c9;
+    cursor: pointer;
+  }
+
+
+  /*Spinner code*/
+  .loader {
+    /*border: 5px solid #f3f3f3; /* Light grey */
+    border: 5px solid white;
+
+    border-top: 5px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.75s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+
+  </style>
+</head>
+<body>
+
+
+  <div id="myModall" class="modall">
+
+    <!-- Modal content -->
+    <div class="modall-content">
+      <span id="modall-close-button" onclick="close_screen()" class="close">&times;</span>
+      <div class="slidecontainer">
+        <h3>Set custom difficulty</h3> <br />
+        <input type="range" oninput="update_range(this.value)"  min="1" max="100" value="50" class="slider" id="myRange">
+        <br />
+        <p id="demo">Have computer make the best move: 50% of the time.</p>
+        <button class="btn btn-primary" type="button" onclick="finish_custom()">Set difficulty</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="settingsModall" class="modall">
+
+    <div class="modall-content">
+      <span id="modall-close-button" onclick="close_settings_screen()" class="close">&times;</span>
+      <h2 style="color: black; border: none;">Game settings</h2>
+      <!-- <br style="line-height: 20px;" /> -->
+      <h4>First to move: </h4>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onclick="set_first_move_human()" checked>
+        <label class="form-check-label" for="exampleRadios1" unselectable="on">
+          Player 1
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" onclick="set_first_move_computer()">
+        <label class="form-check-label" for="exampleRadios2">
+          Computer
+        </label>
+      </div>
+      <p></p>
+      <button class="btn btn-primary" type="button" onclick="close_settings_screen()">Save</button>
+
+
+      <!-- <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="customCheck1">
+      <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+    </div> -->
+
+  </div>
+</div>
+
+
+
+<div class="container">
+  <h1 class="text-center">The Dot Game</h1>
+  <span class="glyphicon glyphicon-wrench fixed-top settings-icon" onclick="open_settings_screen()"></span>
+  <div>
+    <!-- <div style="white-space:nowrap;" class="loader">Text here</div> -->
+  </div>
+
+
+
+
+  <!-- <div class="row"> -->
+
+  <div class="row" >
+    <div class="col-xs-6">
+
+
+
+
+      <div class="dropdown " >
+        <!-- <button class="btn btn-primary dropdown-toggle text-right " type="button" data-toggle="dropdown"><div id="difficulty-display" style="display:inline;">Select Difficulty</div> -->
+        <button class="btn btn-primary dropdown-toggle text-right col-lg-4 btn-block" type="button" data-toggle="dropdown"><p id="difficulty-display" style="display:inline;">Select Difficulty</p>
+
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu span-block">
+          <li><a onclick="set_easy()" href="#">Easy (Random moves)</a></li>
+          <li><a onclick="set_med()" href="#">Medium (Best move 50% of the time)</a></li>
+          <li><a onclick="set_hard()" href="#">Hard (Best move all the time)</a></li>
+          <li class="divider"></li>
+          <li><a onclick="set_custom()" href="#" data-toggle="modal" data-target="#myModal" type="button">Custom (Set the difficulty to whatever you want)</a></li>
+          <!-- <li>
+          <a id="login-button" data-toggle="modal" data-target="#loginModal" type="button">login</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+  <div class="col-xs-6">
+
+
+
+
+    <!-- <div class="col-xs-6 text-left"> -->
+    <button onclick="this.blur();setTimeout(start,10);" id="start-button" type="button" class="btn btn-primary text-right col-lg-4 btn-block disabled">Start <span class="glyphicon glyphicon-chevron-right"></span></button>
+  </div>
+
+</div>
+
+
+</div>
+</div>
+
+
+<div id="thinking" style="height: 50px; display: none;">
+
+  <h4  style="text-align: center;"></h4>
+  <!-- <h4  style="text-align: center;">
+  <br /><b>Thinking...</b></h4> -->
+
+  <div style="margin: 0 auto;" class="loader"></div>
+
+</div>
+
+<div id="not-thinking" style="height: 50px; ">
+  <h4  style="text-align: center;"><br /></h4>
+
+</div>
+
+
+<br /> <br />
+<div style="text-align: center;">
+  <div style="display: inline-block; text-align: left;">
+
+
+    <!-- <h2 unselectable="on" style="cursor: pointer;" id="row1">•</h2>
+    <h2 unselectable="on" style="cursor: pointer;" id="row2">• • •</h2>
+    <h2 unselectable="on" style="cursor: pointer;" id="row3">• • • • • </h2>
+    <h2 unselectable="on" style="cursor: pointer;" id="row4">• • • • • • •</h2>
+    <h2 unselectable="on" style="cursor: pointer;" id="row5">• • • • • • • • •</h2> -->
+
+    <h2 unselectable="on" style="height: 37px;" id="row1" class="become-a-row" onclick="row_clicked(1)"></h2>
+    <h2 unselectable="on" style="height: 37px;" id="row2" class="become-a-row" onclick="row_clicked(2)"></h2>
+    <h2 unselectable="on" style="height: 37px;" id="row3" class="become-a-row" onclick="row_clicked(3)"></h2>
+    <h2 unselectable="on" style="height: 37px;" id="row4" class="become-a-row" onclick="row_clicked(4)"></h2>
+    <h2 unselectable="on" style="height: 37px;" id="row5" class="become-a-row" onclick="row_clicked(5)"></h2>
+    <h2 unselectable="on" style="color: white;" id="row_length_setter" >• • • • • • • • • •</h2>
+
+  </div>
+</div>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</div>
+
+<div class="container">
+
+
+  <div class="my-footer">
+
+    <div class="row" >
+      <div class="col-xs-1">
+
+      </div>
+
+      <div class="col-xs-10 text-center">
+
+
+
+
+        <!-- <div class="col-xs-6 text-left"> -->
+        <button onclick="this.blur();setTimeout(start,10);" id="start-button-bottom" type="button" class="btn btn-primary text-right col-lg-4 btn-block disabled">Start <span class="glyphicon glyphicon-chevron-right"></span></button>
+        <br />
+        <br />
+        <br />
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+</body>
+</html>
